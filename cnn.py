@@ -235,7 +235,6 @@ class RCNN:
         while y2 < y + 1 or x2 < x + 1:
             # Stores maximal value operation for each row
             output_row = []
-            # Stores derivative
             # re-initialize  y1 and y2 values to traverse columns
             y1 = 0
             y2 = pool_filter_size
@@ -354,7 +353,6 @@ class RCNN:
         x2 = pool_filter_size
         y2 = pool_filter_size
         row = 0
-
         while y2 < y + 1 or x2 < x + 1:
             col = 0
             # Re-initialize  y1 and y2 values to traverse columns
@@ -367,18 +365,15 @@ class RCNN:
                 # Calculate the derivative and perform operation of
                 # of the of correct deltas/value in the correct place
                 max_p = np.where(fil == max_value, 1, 0)
-
                 # Check if array is equal
                 if not np.array_equal(max_p, max_prime):
                     max_prime[x1:x2, y1:y2] += max_p
-
                 y1 += 1
                 y2 += 1
                 col += 1
             x1 += 1
             x2 += 1
             row += 1
-
         return max_prime
 
     @jit
