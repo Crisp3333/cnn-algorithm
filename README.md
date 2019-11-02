@@ -9,7 +9,7 @@ The dataset that is being trained is the [Fashion-MNIST dataset by Zalando](http
 
 
 ## Prerequisites
-TensorFlow is used to load the data, therefore TensorFlow will need to be installed to access the Keras library. Note that the data can be [dowloaded](http://yann.lecun.com/exdb/mnist/) on your system if you are having problems utilizing TensorFlow on your system. In such a case, you will need to write a script to read the data from the path they are located on your computer, an example of what you can do is below.
+TensorFlow is used to load the data, therefore TensorFlow will need to be installed to access the Keras library. Note that the data can be [dowloaded](http://yann.lecun.com/exdb/mnist/) to your system if you are having problems utilizing TensorFlow on your system. In such a case, you will need to write a script to read the data from the path they are located on your computer, an example of what you can do is below.
 
 ```python
 import os
