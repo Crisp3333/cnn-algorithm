@@ -41,8 +41,7 @@ Numpy library
 ```
 pip install numpy
 ```
-
-Keras library (if you have problems with TensorFlow)
+[Instructions to install TensorFlow](https://www.tensorflow.org/install/pip). Then install Keras library (if you do not have problems with TensorFlow) with the command below.
 ```
 pip install Keras
 ```
