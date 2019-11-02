@@ -7,7 +7,6 @@ from keras.datasets import fashion_mnist
 
 # Normalize data
 def normalize_data(trainX, trainY, testX, testY):
-    ((trainX, trainY), (testX, testY)) = fashion_mnist.load_data()
     trainXY = []
     train_max = np.amax(trainX)
     test_max = np.amax(testX)
@@ -32,10 +31,10 @@ def normalize_data(trainX, trainY, testX, testY):
 
 
 def main():
-    # Get data from keras dataset.
     """""
     Collect data
     """""
+    # Get data from keras dataset.
     ((trainX, trainY), (testX, testY)) = fashion_mnist.load_data()
     # Call method to normalize data
     trainXY, testXY = normalize_data(trainX, trainY, testX, testY)
@@ -92,5 +91,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
