@@ -32,10 +32,10 @@ def normalize_data(trainX, trainY, testX, testY):
 
 
 def main():
-    # Get data from keras dataset.
     """""
     Collect data
     """""
+    # Get data from keras dataset.
     ((trainX, trainY), (testX, testY)) = fashion_mnist.load_data()
     # Call method to normalize data
     trainXY, testXY = normalize_data(trainX, trainY, testX, testY)
