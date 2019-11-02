@@ -16,7 +16,7 @@ import os
 import gzip
 import numpy as np
 
-# path is the path of the data. The image data and the labels comes in separate files.
+# "path" is the path of the data. The image data and the labels comes in separate files.
 # Please replace "kind" appropaitely, it could be either "t10k" for test data, or "train" training data.
 labels_path = os.path.join(path, '%s-labels-idx1-ubyte.gz' % kind)
 images_path = os.path.join(path, '%s-images-idx3-ubyte.gz' % kind)
