@@ -42,7 +42,7 @@ Numpy library
 pip install numpy
 ```
 
-Keras library
+Keras library (if you have problems with TensorFlow)
 ```
 pip install Keras
 ```
