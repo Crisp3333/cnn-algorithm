@@ -15,7 +15,7 @@ TensorFlow is used to load the data, therefore TensorFlow will need to be instal
 
 MatplotLib and Numpy libraries are also needed.
 
-Numpy library
+Matplotlib library
 ```
 pip install matplotlib
 ```
