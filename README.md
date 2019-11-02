@@ -19,6 +19,7 @@ import numpy as np
 # path is the path of the data. The image data and the labels comes in separate files
 labels_path = os.path.join(path, '%s-labels-idx1-ubyte.gz' % kind)
 images_path = os.path.join(path, '%s-images-idx3-ubyte.gz' % kind)
+# Collect the image and label data as numpy arrays
 with gzip.open(labels_path, 'rb') as lbpath:
     labels = np.frombuffer(lbpath.read(), dtype=np.uint8, offset=8)
 with gzip.open(images_path, 'rb') as imgpath:
