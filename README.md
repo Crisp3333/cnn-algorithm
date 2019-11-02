@@ -9,7 +9,19 @@ The dataset that is being trained is the [Fashion-MNIST dataset by Zalando](http
 
 
 ## Prerequisites
-TensorFlow is used to load the data, therefore TensorFlow will need to be installed to access the Keras library. Note that the data can be dowloaded on your system if you are having problems utilizing TensorFlow on your system python. This program is written in Python 3.5, so it would be good to use Python 3.5 and above to avoid system compatibility issues. 
+TensorFlow is used to load the data, therefore TensorFlow will need to be installed to access the Keras library. Note that the data can be [dowloaded](http://yann.lecun.com/exdb/mnist/) on your system if you are having problems utilizing TensorFlow on your system. In such a case, you will need to write a script to read the data from the path they are located on your computer, an example of what you can do is below
+
+```python
+# path is the path of the data. The image data comes separate from the labels
+labels_path = os.path.join(path, '%s-labels-idx1-ubyte.gz' % kind)
+images_path = os.path.join(path, '%s-images-idx3-ubyte.gz' % kind)
+with gzip.open(labels_path, 'rb') as lbpath:
+    labels = np.frombuffer(lbpath.read(), dtype=np.uint8, offset=8)
+with gzip.open(images_path, 'rb') as imgpath:
+    images = np.frombuffer(imgpath.read(), dtype=np.uint8, offset=16).reshape(len(labels), 784)
+```
+
+This program was written in Python 3.5, so it would be good to use Python 3.5 and above to avoid system compatibility issues. 
 
 ### Install
 
