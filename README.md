@@ -1,0 +1,17 @@
+
+# Convolutional Neural Network
+
+This project is shows the underlying principle of Convolutional Neural Network (CNN). This is a smart way of processing images especially when there are multiple objects within the image.  With the right filtering and pool size the different objects within the image can be processed and identified for classification.
+
+## Getting Started
+
+If the Jit library is causing problems (`from numba import jit`) just omit it or comment it out, and remove `@jit` signatures from functions. You can use various GPU optimization methods, reference [here](https://developer.nvidia.com/how-to-cuda-python) for using my program with CUDA from NVIDIA. 
+
+
+
+## Running the tests
+
+Run `rcnn_test.py` this will generate 3 pickle files with optimal parameters after training. Also for evaluation purposes, the mean squared error and log loss are computed as well as plotted. It is always good to analyze the graphs generated to test for convergence which is a good way to tell if the algorithm is learning. The accuracy is computed and printed for each epoch (iteration) in the console.
+
+You can change learning rate parameter `eta` and the batch size `batch_size` . The skip size`skip_size` is just how much data will be skipped for the total number of training data, either way the training data will always be 80 percent. Therefore test/training ratio is 20/80.
+
